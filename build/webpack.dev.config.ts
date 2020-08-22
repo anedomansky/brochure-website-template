@@ -29,7 +29,7 @@ const devConfig: webpack.Configuration = {
             inject: true,
             title: 'My-Tunes',
             template: path.resolve(__dirname, '../src/index.html'),
-            // favicon: path.resolve(__dirname, '../src/assets/icons/calculator.png'),
+            favicon: path.resolve(__dirname, '../src/assets/icons/music-heart.png'),
         }),
         new ForkTsCheckerWebpackPlugin({
             eslint: true,
