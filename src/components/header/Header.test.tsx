@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import Header from './Header';
 
-test('Renders the App component', () => {
-    const { container } = render(<App />);
+test('Renders the Header component', () => {
+    const { container } = render(<Header />);
     expect(container).toBeInTheDocument();
 });

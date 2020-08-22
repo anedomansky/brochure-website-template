@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import Footer from './Footer';
 
-test('Renders the App component', () => {
-    const { container } = render(<App />);
+test('Renders the Footer component', () => {
+    const { container } = render(<Footer />);
     expect(container).toBeInTheDocument();
 });

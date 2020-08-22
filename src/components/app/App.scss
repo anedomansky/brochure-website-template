@@ -1,0 +1,173 @@
+.content {
+    display: grid;
+    grid-template-areas: 
+    "main main main main"
+    "footer footer footer footer";
+
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-areas: 
+        "banner"
+        "music"
+        "movies"
+        "separator"
+        "gifts";
+    
+        & #banner {
+            grid-area: banner;
+            position: relative;
+    
+            & img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+    
+            & .banner__text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                padding: 0 3rem;
+                color: #eeeeee;
+                text-shadow: 2px 2px #333333;
+    
+                & p {
+                    line-height: 160%;
+                }
+            }
+        }
+    
+        & #music {
+            grid-area: music;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #333333;
+            color: #eeeeee;
+            padding: 1rem;
+    
+            & .music__note {
+                filter: invert(100%) sepia(3%) saturate(362%) hue-rotate(193deg) brightness(114%) contrast(87%);
+            }
+    
+            & button {
+                background-color: #0726d3;
+                color: #eeeeee;
+                border: 1px solid #0726d3;
+                font-size: 1.25rem;
+                padding: 0.25rem;
+                border-radius: 0.25rem;
+                cursor: pointer;
+            }
+    
+            & .music__tablet {
+                width: 50%;
+                height: auto;
+            }
+        }
+    
+        & #movies {
+            grid-area: movies;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #eeeeee;
+            color: #333333;
+            padding: 1rem;
+            text-align: center;
+    
+            & button {
+                background-color: #0726d3;
+                color: #eeeeee;
+                border: 1px solid #0726d3;
+                font-size: 1.25rem;
+                padding: 0.25rem;
+                border-radius: 0.25rem;
+                cursor: pointer;
+            }
+    
+            & img {
+                margin-top: 1rem;
+                width: 75%;
+                height: auto;
+            }
+        }
+    
+        & #separator {
+            grid-area: separator;
+            position: relative;
+    
+            & img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+    
+            & .separator__text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                color: #eeeeee;
+                padding: 0 3rem;
+            }
+        }
+    
+        & #gift-cards {
+            grid-area: gifts;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+    
+            & .gift-cards__image {
+                height: 200px;
+            }
+    
+            & .gift-cards__text {
+                padding: 0 1rem;
+    
+                & a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    
+    @media all and (max-width: 580px) {
+        main {
+            & #banner .banner__text {
+                top: 25%;
+                left: 0;
+                transform: translate(0, -10%);
+    
+                & p {
+                    display: none;
+                }
+            }
+    
+            & #separator .separator__text {
+                top: 15%;
+                left: 0;
+                transform: translate(0, -5%);
+    
+                & p {
+                    display: none;
+                }
+            }
+    
+            & #gift-cards {
+                grid-area: gifts;
+                display: flex;
+                flex-direction: column;
+    
+                & .gift-cards__image {
+                    height: 150px;
+                }
+            }
+        }
+    }
+}

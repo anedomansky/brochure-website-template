@@ -4,6 +4,10 @@
     box-sizing: border-box; // Include padding and border in the element's total width and height
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     height: 100vh;
