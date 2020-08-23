@@ -8,6 +8,8 @@ import musicImg from '../../assets/images/app-entertainment-ipad-mockup.jpg';
 import moviesImg from '../../assets/images/iphone-dark-notebook-pen.jpg';
 import separatorImg from '../../assets/images/blue-universe.jpg';
 import giftCardsImg from '../../assets/images/black-box-with-green-bow-accent.jpg';
+import ImageLine from '../image-line/ImageLine';
+import FeedbackSlider from '../feedback-slider/FeedbackSlider';
 
 const App: React.FC = () => (
     <div className="content" role="application">
@@ -38,6 +40,7 @@ const App: React.FC = () => (
                 <p><small>Orange Music is available in myTunes, and for iOS and Android devices.</small></p>
                 <img className="music__tablet" src={musicImg} alt="Tablet-Smartphone-Mockup" />
             </section>
+            <FeedbackSlider />
             <section id="movies">
                 <h1>The movie and TV show collection you always wished for. Granted.</h1>
                 <p>With over 100,000 movies and TV shows to choose from, there's always something great to watch on
@@ -70,6 +73,7 @@ const App: React.FC = () => (
                     <a href="#"> Redeem</a>
                 </div>
             </section>
+            <ImageLine />
         </main>
         <Footer />
     </div>

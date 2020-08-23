@@ -10,9 +10,11 @@
         grid-template-areas: 
         "banner"
         "music"
+        "feedback"
         "movies"
         "separator"
-        "gifts";
+        "gifts"
+        "image-line";
     
         & #banner {
             grid-area: banner;
